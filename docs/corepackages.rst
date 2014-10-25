@@ -4,17 +4,19 @@ Core Packages
 collective.geo.geographer
 -------------------------
 
-collective.geo.geographer has been documented on readthedocs.org: http://collectivegeo.readthedocs.org/projects/collectivegeogeographer/
+`collective.geo.geographer`_ is documented at:
+http://collectivegeo.readthedocs.org/projects/collectivegeogeographer/
 
 collective.geo.openlayers
 -------------------------
 
 This package includes `OpenLayers`_ framework in Plone.
 
-You can include an `Openlayers`_ map in a page using a `BrowserView <http://developer.plone.org/views/browserviews.html>`_
+You can include an `Openlayers`_ map in a page using a 
+`BrowserView <http://developer.plone.org/views/browserviews.html>`_
 or a `Page template <http://docs.zope.org/zope2/zope2book/ZPT.html>`_.
 
-There is a simple integration example:
+Here is a simple integration example:
 
 .. code-block:: html
 
@@ -83,17 +85,20 @@ collective.geo.settings
 This package provides some utilities to store settings used in
 collective.geo packages.
 
-Settings are stored in Plone registry and they provide default values to map widgets.
+Settings are stored in Plone registry and they provide default values to map
+widgets.
 
 They are split in two different interfaces:
 
-* IGeoSettings for map settings, like default map layers, center, zoom  etc.
-* IGeoFeatureStyle for map style like lines and polygon colors, marke image etc.
+* :class:`IGeoSettings` for map settings, like default map layers, center,
+  zoom  etc.
+* :class:`IGeoFeatureStyle` for map style like lines and polygon colors,
+  marker image, etc.
 
 For more details see:
 `collective.geo.settings.interfaces <https://github.com/collective/collective.geo.settings/blob/master/collective/geo/settings/interfaces.py>`_
 
-You can retrieve settings by `plone.app.registry`_ API:
+You can retrieve settings by using the `plone.app.registry`_ API:
 
 .. code-block:: python
 
@@ -102,13 +107,13 @@ You can retrieve settings by `plone.app.registry`_ API:
     from plone.registry.interfaces import IRegistry
     from collective.geo.settings.interfaces import IGeoSettings
     registry = getUtility(IRegistry)
-    settings = registry.forInterface(IGeoSettings)
 
+    settings = registry.forInterface(IGeoSettings)
 
     from collective.geo.settings.interfaces import IGeoFeatureStyle
     styles = registry.forInterface(IGeoSettings)
 
-or using some utilities:
+or by using some utilities:
 
 .. code-block:: python
 
@@ -120,10 +125,12 @@ or using some utilities:
 
 
 Coordinate field
-^^^^^^^^^^^^^^^^
+````````````````
 
-collective.geo.settings defines a field type 'Coordinate'
+`collective.geo.settings`_ defines a field type :class:`Coordinate`
 useful to define a coordinate attribute in Zope Interface and use it in forms.
+
+.. _collective.geo.settings: http://pypi.python.org/pypi/collective.geo.settings
 
 You can define an interface in this way:
 
@@ -167,7 +174,7 @@ Example:
 
         ...
 
-.. * collective.geo.mapwdget
+.. * collective.geo.mapwidget
 .. * collective.geo.contentlocations
 .. * collective.geo.kml
 .. * collective.geo.behaviour

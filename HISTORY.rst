@@ -5,7 +5,7 @@ Changelog
 2.3 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Editing (language, markup) [jean]
 
 
 2.2 (2014-08-16)
@@ -38,9 +38,8 @@ Changelog
   [gborelli]
 
 - Added buildout configuration
-- Refacrtorized package structure
+- Refactored package structure
   [giacomos]
-
 
 
 0.1 (2011-03-06)
